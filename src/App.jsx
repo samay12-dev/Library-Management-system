@@ -4,6 +4,7 @@ import Image from './components/Image'
 import Category1 from './components/Category1'
 import Library from './components/Library'
 import BookDetails from './components/BookDetails'
+import About from './components/About'
 import './App.css'
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
 
       {/* Library shown standalone (no Header/Footer) */}
       <Route path='/library' element={<Library />} />
+      <Route path='/about' element={<About/>}/>
     </Routes>
   )
 }
