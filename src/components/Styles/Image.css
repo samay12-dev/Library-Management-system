@@ -1,0 +1,28 @@
+#text1{
+    border: none;
+    outline: none;
+}
+#text1:focus {
+  outline: none;       /* removes default blue outline */
+  border: none;        /* removes border if browser adds one */
+  box-shadow: none;    /* removes shadow if applied */
+}
+.circ{
+    border-radius: 16px;
+}
+.circ:hover{
+    perspective: 200px;
+    transform: scaleZ(100px);
+}
+#text1 {
+  border: 1px solid #ccc;
+  padding: 8px;
+  border-radius: 4px;
+  transition: border-color 0.3s ease;
+}
+
+#text1:focus {
+  outline: none;
+  border-color: #4f46e5;   /* Tailwind indigo-600 */
+  box-shadow: 0 0 5px rgba(79,70,229,0.5);
+}

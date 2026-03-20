@@ -1,0 +1,15 @@
+.img1{
+    border: 2px solid black;
+}
+.circ{
+    border-radius: 80%;
+    height: 250px;
+    width: 250px;
+}
+/* .circ1{
+       perspective: 100px;
+}
+.circ:hover {
+ 
+    transform: scale3d(1, 1, 2); /* Z-axis पर 2x zoom */
+    /* box-shadow: 2px 2px 1px; */
