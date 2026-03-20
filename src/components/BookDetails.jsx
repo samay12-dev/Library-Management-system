@@ -36,7 +36,7 @@ const BookDetails = () => {
     }
 
     return (
-        <div className='p-6'>
+        <div className='p-6 flex flex-col justify-center items-center'>
             <h1 className='text-3xl font-bold mb-4'>{book.title}</h1>
             {book.cover && (
                 <img src={book.cover.large || book.cover.medium} alt={book.title} className='mb-4' />

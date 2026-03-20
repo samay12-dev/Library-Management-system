@@ -24,6 +24,11 @@ setData(ab)
 setData(data[info])
 
   }
+  if(!data){
+    return(
+        <>OOps! Google Books Api not working Properly</>
+    )
+  }
   return (
     <>
     <main className='flex flex-col items-center justify-evenly  pb-6'>

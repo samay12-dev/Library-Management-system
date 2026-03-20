@@ -1,5 +1,6 @@
 import React from 'react'
 import Header from './Header'
+import Footer from './Footer'
 const About = () => {
   return (
     <>
@@ -8,8 +9,10 @@ const About = () => {
    This project is made by samay Gaihar(oct batch) <br>
    
    </br>  
-   as a react mini assignment(Library Mini Assignment) 
-    </div></>
+   as a react mini assignment(Library Management Assignment) 
+    </div>
+    {/* <Footer/></> */}
+    </>
   )
 }
 
