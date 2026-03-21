@@ -17,7 +17,7 @@ function App() {
       <Route element={<MainLayout />}>
         <Route path='/' element={<>
           <Image />
-          <Category1 />
+         
         </>} />
         <Route path='/bookdetails' element={<BookDetails />} />
       </Route>

@@ -21,9 +21,9 @@ useEffect(()=>{
     let response1 = await response.json();
     setData(response1);
 
-    console.log("DATA:", response1); // ✅ now you’ll see it
+    console.log("DATA:", response1); 
   } catch (err) {
-    console.log("ERROR:", err); // 🔥 important
+    console.log("ERROR:", err); 
   }
 }
 
