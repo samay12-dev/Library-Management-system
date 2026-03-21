@@ -6,6 +6,8 @@ import Library from './components/Library'
 import BookDetails from './components/BookDetails'
 import About from './components/About'
 import AddBooks from './components/AddBooks'
+import BookDetails1 from './components/BookDetails1'
+import ErrorElement from './components/ErrorElement'
 import './App.css'
 
 function App() {
@@ -24,6 +26,8 @@ function App() {
       <Route path='/library' element={<Library />} />
       <Route path='/about' element={<About/>}/>
       <Route path='/addbooks' element={<AddBooks/>}/>
+      <Route path='/bookdetails1' element={<BookDetails1/>}/>
+       <Route path="*" element={<ErrorElement />} />
     </Routes>
   )
 }

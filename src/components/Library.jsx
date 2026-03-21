@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import Footer from './Footer';
+import { Link } from 'react-router-dom';
 // import './Styles/Library.css'
+import Header from './Header';
 const Library = () => {
   const [data,setData]= useState([]);
   
@@ -25,12 +27,14 @@ setData(data[info])
 
   }
   if(!data){
-    return(
-        <>OOps! Google Books Api not working Properly</>
+    return( <>
+      
+       OOps! Google Books Api not working Properly</>
     )
   }
   return (
     <>
+    <Header/>
     <main className='flex flex-col items-center justify-evenly  pb-6'>
         <div className="library-container p-6 flex justify-between items-center">
       <h1 className="text-4xl font-semibold p-5 text-center">Library</h1>
@@ -38,7 +42,7 @@ setData(data[info])
 <span className=' outline-none border-2 rounded-md  pr-1 pl-1  pb-2  flext items-center justify-center h-8 hover:shadow-md hover:translate-y-1 text-white bg-blue-600' onClick={handleClick}>Best Books</span>
 <div className='grid grid-cols-4 gap-4 mt-6'>{
 data.map((item,index)=>(
-<ul className='flex flex-col items-center justify-center  border-2 mr-4 shadow-md bg-slate-100 translate-y-3'><li key={index} ><img   src={item.volumeInfo.imageLinks?.thumbnail}  alt="noImage"  onClick={()=>handleClick1(index)} /></li><br></br>
+<ul className='flex flex-col items-center justify-center  border-2 mr-4 shadow-md bg-slate-100 translate-y-3'><li key={index} > <Link to={'/bookdetails1'} state={{index}}><img   src={item.volumeInfo.imageLinks?.thumbnail}  alt="noImage"  onClick={()=>handleClick1(index)} /></Link> </li><br></br>
 <li className='items-center'>{item.volumeInfo.title}</li>
 <li><b> Author</b>:{item.volumeInfo.authors}
     </li>

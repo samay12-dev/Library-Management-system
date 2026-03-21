@@ -20,7 +20,7 @@ const Books = () => {
 
   return (
     <>
-      <h1 className='text-4xl font-bold text-center pb-5 pt-4'>BOOKS</h1>
+      <h1 className='text-4xl font-bold text-center pb-5 pt-4'> Trending BOOKS</h1>
       <div className='flex flex-wrap justify-evenly'>
         {books.map((item, index) => (
           <div key={index} className='m-8 w-72'>

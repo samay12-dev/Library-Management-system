@@ -11,6 +11,11 @@ const About = () => {
    </br>  
    as a react mini assignment(Library Management Assignment) 
     </div>
+    <div className='text-center pt-10  '><h1 className='text-3xl'>Technologies Used:- </h1>
+    <ul><li className='text-xl'>Redux toolkit(In addBook page)</li>
+    <li className='text-xl'>Routes</li>
+    <li className='text-xl'>Geolocation hook from Routes</li></ul></div>
+    
     {/* <Footer/></> */}
     </>
   )

@@ -19,9 +19,25 @@ const booksSlice = createSlice({
 
 export const { addBook, removeBook, clearBooks } = booksSlice.actions
 
+const notificationSlice = createSlice({
+  name: 'notification',
+  initialState: { message: '' },
+  reducers: {
+    setMessage(state, action) {
+      state.message = action.payload
+    },
+    clearMessage(state) {
+      state.message = ''
+    }
+  }
+})
+
+export const { setMessage, clearMessage } = notificationSlice.actions
+
 const store = configureStore({
   reducer: {
-    books: booksSlice.reducer
+    books: booksSlice.reducer,
+    notification: notificationSlice.reducer
   }
 })
 

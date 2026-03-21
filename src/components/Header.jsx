@@ -5,10 +5,10 @@ import { useSelector } from 'react-redux'
 
 const Header = () => {
   const savedCount = useSelector(state => state.books?.items?.length || 0)
-
+// ({savedCount})
   return (
     <header className="flex justify-between items-center bg-gradient-to-r from-[#0B2C5F] to-[#1E3A6D] text-white p-6 items-center hover: border-b-2 hover:border-white">
-      <h2 className="text-2xl font-semibold">MyLibrary ({savedCount})</h2>
+      <h2 className="text-2xl font-semibold">MyLibrary </h2>
       <ul className="flex gap-6 items-center">
         <li className='text-xl'>
           <Link to={'/addbooks'} className="link">AddItem</Link>

@@ -1,12 +1,13 @@
 import React, { useState } from 'react'
-import { useDispatch } from 'react-redux'
-import { addBook } from '../store/store'
+import { useDispatch, useSelector } from 'react-redux'
+import { addBook, setMessage, clearMessage } from '../store/store'
 import Header from './Header'
 const AddBooks = () => {
   const [title, setTitle] = useState('')
   const [author, setAuthor] = useState('')
   const [description, setDescription] = useState('')
   const dispatch = useDispatch()
+  const message = useSelector((state) => state.notification?.message)
 
   const handleSubmit = (e) => {
     e.preventDefault()
@@ -21,6 +22,8 @@ const AddBooks = () => {
     }
 
     dispatch(addBook(book))
+    dispatch(setMessage('Book added successfully'))
+    setTimeout(() => dispatch(clearMessage()), 3000)
     setTitle('')
     setAuthor('')
     setDescription('')
@@ -29,6 +32,9 @@ const AddBooks = () => {
   return (
     <>
   <Header/>
+    {message && (
+      <div className="bg-green-100 text-green-800 p-3 rounded mb-4 text-center">{message}</div>
+    )}
     <form onSubmit={handleSubmit} className="add-book-form  text-xl flex flex-col items-center justify-center pt-8">
       <div className='pt-3'>
         <label htmlForfor="title" >Title:</label>
